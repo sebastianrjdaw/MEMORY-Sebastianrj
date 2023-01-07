@@ -5,9 +5,10 @@
 
 include('DAO.php');
 include('usuario.class.php');
+session_start();
 
 //Control de acceso
-if (!isset($_SESSION['rol']) || $_SESSION['rol'] == 'user') {
+if ($_SESSION['rol'] == 'user') {
   header('Location: index.php');
 }
 

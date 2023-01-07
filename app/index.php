@@ -30,7 +30,7 @@ if (isset($_POST['options'])) {
 if (isset($_POST['exit'])) {
   header('Location: logoff.php');
 }
-
+var_dump($_SESSION['rol']);
 ?>
 
 <!DOCTYPE html>
