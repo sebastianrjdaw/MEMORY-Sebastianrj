@@ -1,65 +1,82 @@
 /* PALETTE */
-*{
-    font-family: sans-serif;
-    margin: 0;
-    padding: 0;
-    
+* {
+  font-family: sans-serif;
+  margin: 0;
+  padding: 0;
 }
-body{
-    background-image:url(/app/img/stacked-peaks-haikei.svg);
-    background-size: cover;
+body {
+  background-image: url(/app/img/stacked-peaks-haikei.svg);
+  background-size: cover;
+  display: flex;
+  flex-direction: column;
 }
-.main{
-    text-align: center;
+.eventos{
+  padding: 2px;
+  text-align: right;
+  margin-right: 75px;
+  margin-top: 20px;
+  justify-content: center;
+  color:#fff
 }
-#logo{
+.eventos > h3{
+  margin-bottom: 5px;
+}
+
+.main {
+  text-align: center;
+}
+#logo {
   width: 400px;
   height: 400px;
 }
 
-.mensaje{
+.mensaje {
   text-transform: uppercase;
-  color:#fff;
+  color: #fff;
   font-size: 15px;
   font-weight: 700;
-  letter-spacing: .8px;
+  letter-spacing: 0.8px;
   margin-bottom: 10px;
 }
-#wellcome{
+.created{
+  text-transform: uppercase;
+  color: #fff;
+  font-size: 9px;
+  margin-bottom: 15px;
+}
+#wellcome {
   font-size: 20px;
   margin-bottom: 20px;
 }
 
-.main-buttons{
-    margin: 0px auto;
-    margin-top: auto;
-    display: flex;
-    flex-direction: column;
-    gap: 20px;
-    width: 400px;
-    height: 400px;
+.main-buttons {
+  margin: 0px auto;
+  margin-top: auto;
+  display: flex;
+  flex-direction: column;
+  gap: 20px;
+  width: 400px;
+  height: 400px;
 }
-#salir{
-    margin-top: 30px;
-    margin-bottom: none;
+#salir {
+  margin-top: 30px;
+  margin-bottom: none;
 }
-
-
 
 /*  botones */
 .boton {
   appearance: button;
-  background-color: #1899D6;
+  background-color: #1899d6;
   border: solid transparent;
   border-radius: 16px;
   border-width: 0 0 4px;
   box-sizing: border-box;
-  color: #FFFFFF;
+  color: #ffffff;
   cursor: pointer;
   display: inline-block;
   font-size: 15px;
   font-weight: 700;
-  letter-spacing: .8px;
+  letter-spacing: 0.8px;
   line-height: 20px;
   margin: 0;
   outline: none;
@@ -69,7 +86,7 @@ body{
   text-transform: uppercase;
   touch-action: manipulation;
   transform: translateZ(0);
-  transition: filter .2s;
+  transition: filter 0.2s;
   user-select: none;
   -webkit-user-select: none;
   vertical-align: middle;
@@ -79,7 +96,7 @@ body{
 
 .boton:after {
   background-clip: padding-box;
-  background-color: #1CB0F6;
+  background-color: #1cb0f6;
   border: solid transparent;
   border-radius: 16px;
   border-width: 0 0 4px;
@@ -108,14 +125,14 @@ body{
 
 /* Estilo Login */
 
-#pre-play{
+#pre-play {
   display: flex;
   flex-direction: column;
   gap: 7px;
-  align-items:center ;
+  align-items: center;
 }
 
-#pre-play input{
+#pre-play input {
   border-radius: 16px;
   text-align: center;
   height: 30px;
@@ -124,13 +141,13 @@ body{
 
 /* Estilo Registro */
 
-#registro{
+#registro {
   display: flex;
   flex-direction: column;
   gap: 12px;
-  align-items:center ;
+  align-items: center;
 }
-#registro input{
+#registro input {
   border-radius: 16px;
   text-align: center;
   height: 40px;
@@ -138,73 +155,72 @@ body{
 }
 
 /* Estilo Opciones */
-#option-name{
+#option-name {
   display: flex;
   flex-direction: column;
   gap: 10px;
-  align-items:center ;
+  align-items: center;
   margin-bottom: 10px;
 }
-#option-name input{
+#option-name input {
   border-radius: 16px;
   text-align: center;
   height: 30px;
   width: 100%;
 }
- .option-select{
+.option-select {
   text-align: center;
-  background-color: #1CB0F6;
-  border-bottom: 2px solid #1899D6;
-  color: #FFFFFF;
+  background-color: #1cb0f6;
+  border-bottom: 2px solid #1899d6;
+  color: #ffffff;
   padding: 10px;
   font-size: 15px;
   font-weight: 700;
-  letter-spacing: .8px;
+  letter-spacing: 0.8px;
   height: 60px;
   border-radius: 16px;
   width: auto;
- }
- #options{
+}
+#options {
   align-items: center;
- }
- .btn-preferencias button {
+}
+.btn-preferencias button {
   margin-top: 15px;
   margin-bottom: 5px;
- }
+}
 
- .main-play{
+.main-play {
   justify-content: center;
   display: flex;
   flex-direction: row;
   gap: 100px;
- }
+}
 
-.main-card{
+.main-card {
   display: flex;
   flex-direction: column;
   align-items: center;
   margin-top: 50px;
-  
 }
 
-.fila{
+.fila {
   display: flex;
   flex-direction: row;
 }
 
- .carta{
+.carta {
   margin: 10px;
   width: 150px;
   height: 200px;
   background-color: rgb(9, 191, 247);
- }
+}
 
 .info {
   padding: 2px;
   text-align: center;
-  margin-top:50px;
+  margin-top: 50px;
 }
-.play-buttons{
+.play-buttons {
   margin: 0px auto;
   margin-top: auto;
   display: flex;
@@ -214,13 +230,12 @@ body{
   height: 200px;
 }
 
-.not-active { 
-  pointer-events: none; 
-  cursor: default; 
-} 
+.not-active {
+  pointer-events: none;
+  cursor: default;
+}
 
- 
-footer{
+footer > h2 {
   margin-top: 50px;
   margin-right: 50px;
   text-align: right;
@@ -229,26 +244,26 @@ footer{
 
 @media screen and (max-width: 600px) {
   table {
-      width:100%;
+    width: 100%;
   }
   thead {
-      display: none;
+    display: none;
   }
   tr:nth-of-type(2n) {
-      background-color: inherit;
+    background-color: inherit;
   }
   tr td:first-child {
-      background: #f0f0f0;
-      font-weight:bold;
-      font-size:1.3em;
+    background: #f0f0f0;
+    font-weight: bold;
+    font-size: 1.3em;
   }
   tbody td {
-      display: block;
-      text-align:center;
+    display: block;
+    text-align: center;
   }
   tbody td:before {
-      content: attr(data-th);
-      display: block;
-      text-align:center;
+    content: attr(data-th);
+    display: block;
+    text-align: center;
   }
 }

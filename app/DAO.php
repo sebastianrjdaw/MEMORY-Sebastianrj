@@ -143,3 +143,37 @@ function array_sort_by(&$arrIni, $col, $order = SORT_ASC)
     }
     array_multisort($arrAux, $order, $arrIni);
 }
+
+//Funcion de Control de eventos
+function obtenerEventos()
+{
+    $fichero = 'csv/eventos.csv';
+    $arrayDatos = array();
+    if ($fp = fopen($fichero, "r")) {
+        while ($filaDatos = fgetcsv($fp, 0, ",")) {
+            $evento = new Evento($filaDatos[0], $filaDatos[1]);
+            $arrayDatos[] = $evento;
+        }
+    } else {
+        echo "Error no se puede acceder al fichero";
+        return false;
+    }
+    fclose($fp);
+    return $arrayDatos;
+}
+
+function escribirEventos($arrayEscribir)
+{
+    $fichero = 'csv/eventos.csv';
+    if ($fp = fopen($fichero, "w")) {
+        foreach ($arrayEscribir as $evento) {
+            $filaDatos = [$evento->getFecha(),$evento->getDescripcion()];
+            fputcsv($fp, $filaDatos);
+        }
+    } else {
+        echo "Error no se puede aceder al fichero";
+        return false;
+    }
+    fclose($fp);
+    return true;
+}

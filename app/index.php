@@ -3,7 +3,8 @@
 // SEBASTIAN RJ
 // 13/12/2022
 session_start();
-
+include('DAO.php');
+include('evento.class.php');
 if (isset($_POST['play'])) {
   if (isset($_SESSION['username'])) { // Si esta loggeado ya manda directamente a jugar
     header('Location: play.php');
@@ -31,6 +32,10 @@ if (isset($_POST['exit'])) {
   header('Location: logoff.php');
 }
 
+//Gestion de Eventos
+$events = obtenerEventos();
+
+
 ?>
 
 <!DOCTYPE html>
@@ -45,8 +50,20 @@ if (isset($_POST['exit'])) {
 </head>
 
 <body>
+  <div class="eventos">
+    <h3>Proximos Eventos</h3>
+        <?php
+        foreach ($events as $evento) {
+          if ($evento->getFecha() < (time() + 604800 )) { //Enseñar el evento semanal mas proximo
+            ?>
+            <p><?php echo date("d-m-Y", $evento->getFecha()); ?></p>
+            <p><?php echo $evento->getDescripcion() ?></p>
+        <?php }
+        } ?>
+  </div>  
   <div class="main">
     <img id="logo" src="img/MEMORY (1).png" />
+    <p class="created">CREATED BY SEBASTIANRJ 2022 &copy;</p>
     <p class="mensaje" id="wellcome"><?php if (isset($_SESSION['username'])) {
                                         echo 'Bienvenido  ' . $_SESSION['username'];
                                       } ?></p>
@@ -63,8 +80,8 @@ if (isset($_POST['exit'])) {
     </form>
   </div>
 </body>
-<footer>
+<!-- <footer>
   <h2> CREATED BY SEBASTIAN R.J. 2022 </h2>
-</footer>
+</footer> -->
 
 </html>
