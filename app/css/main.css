@@ -1,0 +1,254 @@
+/* PALETTE */
+*{
+    font-family: sans-serif;
+    margin: 0;
+    padding: 0;
+    
+}
+body{
+    background-image:url(/app/img/stacked-peaks-haikei.svg);
+    background-size: cover;
+}
+.main{
+    text-align: center;
+}
+#logo{
+  width: 400px;
+  height: 400px;
+}
+
+.mensaje{
+  text-transform: uppercase;
+  color:#fff;
+  font-size: 15px;
+  font-weight: 700;
+  letter-spacing: .8px;
+  margin-bottom: 10px;
+}
+#wellcome{
+  font-size: 20px;
+  margin-bottom: 20px;
+}
+
+.main-buttons{
+    margin: 0px auto;
+    margin-top: auto;
+    display: flex;
+    flex-direction: column;
+    gap: 20px;
+    width: 400px;
+    height: 400px;
+}
+#salir{
+    margin-top: 30px;
+    margin-bottom: none;
+}
+
+
+
+/*  botones */
+.boton {
+  appearance: button;
+  background-color: #1899D6;
+  border: solid transparent;
+  border-radius: 16px;
+  border-width: 0 0 4px;
+  box-sizing: border-box;
+  color: #FFFFFF;
+  cursor: pointer;
+  display: inline-block;
+  font-size: 15px;
+  font-weight: 700;
+  letter-spacing: .8px;
+  line-height: 20px;
+  margin: 0;
+  outline: none;
+  overflow: visible;
+  padding: 13px 16px;
+  text-align: center;
+  text-transform: uppercase;
+  touch-action: manipulation;
+  transform: translateZ(0);
+  transition: filter .2s;
+  user-select: none;
+  -webkit-user-select: none;
+  vertical-align: middle;
+  white-space: nowrap;
+  width: 100%;
+}
+
+.boton:after {
+  background-clip: padding-box;
+  background-color: #1CB0F6;
+  border: solid transparent;
+  border-radius: 16px;
+  border-width: 0 0 4px;
+  bottom: -4px;
+  content: "";
+  left: 0;
+  position: absolute;
+  right: 0;
+  top: 0;
+  z-index: -1;
+}
+
+.boton:main,
+.boton:focus {
+  user-select: auto;
+}
+
+.boton:hover:not(:disabled) {
+  filter: brightness(1.1);
+  -webkit-filter: brightness(1.1);
+}
+
+.boton:disabled {
+  cursor: auto;
+}
+
+/* Estilo Login */
+
+#pre-play{
+  display: flex;
+  flex-direction: column;
+  gap: 7px;
+  align-items:center ;
+}
+
+#pre-play input{
+  border-radius: 16px;
+  text-align: center;
+  height: 30px;
+  width: 100%;
+}
+
+/* Estilo Registro */
+
+#registro{
+  display: flex;
+  flex-direction: column;
+  gap: 12px;
+  align-items:center ;
+}
+#registro input{
+  border-radius: 16px;
+  text-align: center;
+  height: 40px;
+  width: 100%;
+}
+
+/* Estilo Opciones */
+#option-name{
+  display: flex;
+  flex-direction: column;
+  gap: 10px;
+  align-items:center ;
+  margin-bottom: 10px;
+}
+#option-name input{
+  border-radius: 16px;
+  text-align: center;
+  height: 30px;
+  width: 100%;
+}
+ .option-select{
+  text-align: center;
+  background-color: #1CB0F6;
+  border-bottom: 2px solid #1899D6;
+  color: #FFFFFF;
+  padding: 10px;
+  font-size: 15px;
+  font-weight: 700;
+  letter-spacing: .8px;
+  height: 60px;
+  border-radius: 16px;
+  width: auto;
+ }
+ #options{
+  align-items: center;
+ }
+ .btn-preferencias button {
+  margin-top: 15px;
+  margin-bottom: 5px;
+ }
+
+ .main-play{
+  justify-content: center;
+  display: flex;
+  flex-direction: row;
+  gap: 100px;
+ }
+
+.main-card{
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  margin-top: 50px;
+  
+}
+
+.fila{
+  display: flex;
+  flex-direction: row;
+}
+
+ .carta{
+  margin: 10px;
+  width: 150px;
+  height: 200px;
+  background-color: rgb(9, 191, 247);
+ }
+
+.info {
+  padding: 2px;
+  text-align: center;
+  margin-top:50px;
+}
+.play-buttons{
+  margin: 0px auto;
+  margin-top: auto;
+  display: flex;
+  flex-direction: column;
+  gap: 20px;
+  width: 200px;
+  height: 200px;
+}
+
+.not-active { 
+  pointer-events: none; 
+  cursor: default; 
+} 
+
+ 
+footer{
+  margin-top: 50px;
+  margin-right: 50px;
+  text-align: right;
+  color: #fff;
+}
+
+@media screen and (max-width: 600px) {
+  table {
+      width:100%;
+  }
+  thead {
+      display: none;
+  }
+  tr:nth-of-type(2n) {
+      background-color: inherit;
+  }
+  tr td:first-child {
+      background: #f0f0f0;
+      font-weight:bold;
+      font-size:1.3em;
+  }
+  tbody td {
+      display: block;
+      text-align:center;
+  }
+  tbody td:before {
+      content: attr(data-th);
+      display: block;
+      text-align:center;
+  }
+}
