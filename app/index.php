@@ -31,15 +31,12 @@ if (isset($_POST['options'])) {
 if (isset($_POST['exit'])) {
   header('Location: logoff.php');
 }
-<<<<<<< HEAD
 
 //Gestion de Eventos
 $events = obtenerEventos();
 
 
-=======
 var_dump($_SESSION['rol']);
->>>>>>> origin/master
 ?>
 
 <!DOCTYPE html>
