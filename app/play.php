@@ -44,7 +44,7 @@ if (!isset($_SESSION['partida'])) {
     $ids = ['a', 'a', 'b', 'b', 'c', 'c', 'd', 'd', 'e', 'e', 'f', 'f', 'g', 'g', 'h', 'h', 'i', 'i', 'j', 'j', 'k', 'k', 'l', 'l'];
     for ($k = 0; $k < 24; $k++) {
         $cartas[] = $carta = new carta($ids[$k], false, false);
-        //shuffle($cartas);
+        shuffle($cartas);
     }
     $tiempoInicio = time();
     $p = new partida($nombre, $dificultad, $tema, $cartas, 0, $tiempoInicio, false, 12);

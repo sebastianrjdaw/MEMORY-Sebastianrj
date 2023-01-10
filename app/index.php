@@ -80,8 +80,4 @@ $events = obtenerEventos();
     </form>
   </div>
 </body>
-<!-- <footer>
-  <h2> CREATED BY SEBASTIAN R.J. 2022 </h2>
-</footer> -->
-
 </html>

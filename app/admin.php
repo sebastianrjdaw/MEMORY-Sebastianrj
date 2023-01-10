@@ -121,7 +121,7 @@ escribirEventos($events);
         $contEvent = 0;
         foreach ($events as $evento) {
           if ($evento->getFecha() < time()) {
-            
+            unset($evento);
           }
         ?>
           <tr>
