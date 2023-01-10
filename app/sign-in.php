@@ -5,7 +5,6 @@
 
 include('DAO.php');
 include('usuario.class.php');
-$fichero='usuarios.csv';
 $datos=obtenerUsuarios(); //leer Csv de objetos
 $errores=array();
 $datosValidos=array();
